@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', setup);
 
 function setup() {
-    document.querySelector(button).addEventListener('click', fetchData);
+    document.querySelector('button').addEventListener('click', fetchData);
 }
 
 function fetchData(e) {
@@ -26,11 +26,11 @@ function fetchData(e) {
     e.preventDefault();
 }
 
-function displayData(json) {
+function displayData(jsonData) {
     let section = document.querySelector('section');
-    let paraghraph = document.createElement('h1');
-    section.appendChild(paraghraph);
-    paraghraph.textContent = json;
+    let data = document.createElement('h1');
+    section.appendChild(data);
+    section.textContent = jsonData;
 }
 
 function treatError(error) {
