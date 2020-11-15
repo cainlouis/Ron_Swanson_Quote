@@ -3,6 +3,10 @@
 
 document.addEventListener('DOMContentLoaded', setup);
 
+/**
+ * Setup is called when the dom is loaded and creates an event listener
+ * for the button and call fetchData
+ */
 function setup() {
     document.querySelector('button').addEventListener('click', fetchData);
 }
