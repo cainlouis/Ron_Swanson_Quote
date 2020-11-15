@@ -7,5 +7,34 @@ function setup() {
 }
 
 function fetchData(e) {
-    let url = ''
+    let url = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+    fetch(url).then(response => {
+        if (response.ok) {
+            console.log('Status Code: ' + response.status);
+            return response.json();
+        }
+        else {
+            throw new Error('Status Code: ' + response.status);
+        }
+    })
+    .then(json => {
+        displayData(json);
+    })
+    .catch(error => {
+        treatError(error);
+    });
+    e.preventDefault();
+}
+
+function displayData(json) {
+    let section = document.querySelector('section');
+    let paraghraph = document.createElement('h1');
+    section.appendChild(paraghraph);
+    paraghraph.textContent = json;
+}
+
+function treatError(error) {
+    console.error(error);
+    let errp = document.querySelector('p');
+    errp.textContent = error;
 }
