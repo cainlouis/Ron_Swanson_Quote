@@ -43,10 +43,8 @@ function fetchData(e) {
  * @param {*} jsonData 
  */
 function displayData(jsonData) {
-    let section = document.querySelector('section');
-    let data = document.createElement('h1');
-    section.appendChild(data);
-    section.textContent = jsonData;
+    let data = document.querySelector('h1');
+    data.textContent = jsonData;
 }
 
 /**
