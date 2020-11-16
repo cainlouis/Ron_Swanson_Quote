@@ -7,7 +7,7 @@ body {
     width: 100%;
     min-height: 100%;
     margin: 0;
-    background-image: url(../image/ron_swanson_wallpaper.jpg);
+    background-image: url(../image/ron-swanson-wallpapers.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -27,10 +27,23 @@ section {
     height: 300px;
 }
 
-
+p {
+   text-align: center;
+   font-size: x-large; 
+}
 footer {
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
-    color: #FF0000;
+    color:rgb(138, 4, 179);
+}
+
+button {
+    border-radius: 10px;
+    background-color: rgb(151, 6, 196);
+    color: blanchedalmond;
+}
+
+a {
+    color: black;
 }
